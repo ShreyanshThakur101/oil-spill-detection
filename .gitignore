@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment variables & secrets
+.env
+*.env
+.env.*
+!.env.example
+
+# SQLite Database
+backend/data/*.db
+backend/data/oil_spill.db
+*.sqlite3
+*.db
+
+# Data & Raw files (do not commit large raw downloads)
+backend/data/raw/*
+!backend/data/raw/README.md
+!backend/data/raw/.gitkeep
+
+# Model weights & binaries
+backend/data/models/*
+!backend/data/models/README.md
+!backend/data/models/.gitkeep
+*.pth
+*.pt
+*.onnx
+*.pkl
+*.h5
+*.ckpt
+
+# Frontend / Node
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

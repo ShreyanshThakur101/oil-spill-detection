@@ -1,0 +1,12 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+sqlalchemy>=2.0
+pydantic>=2.0
+shapely>=2.0
+pyproj
+requests
+pytest
+
+# --- Person 2 additions ---
+
+# --- Person 3 additions ---
