@@ -10,3 +10,4 @@ pytest
 # --- Person 2 additions ---
 
 # --- Person 3 additions ---
+opendrift==1.14.11
