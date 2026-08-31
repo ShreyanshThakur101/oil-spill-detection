@@ -1,0 +1,12 @@
+{
+  "name": "Case 1 \u2014 2025 Kerala Coast (MSC Elsa III)",
+  "description": "Publicly documented bunker spill incident off Kochi/Kerala coast in May 2025. Sentinel-1 SAR acquisition captured slick spread along coastal shipping lanes.",
+  "sar_image_path": "data/raw/sentinel1/case_1_scene.tif",
+  "image_timestamp": "2025-05-26T03:00:00Z",
+  "bbox": [
+    74.0,
+    8.5,
+    77.5,
+    11.0
+  ]
+}
