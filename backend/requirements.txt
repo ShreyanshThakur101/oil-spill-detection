@@ -8,5 +8,12 @@ requests
 pytest
 
 # --- Person 2 additions ---
+torch>=2.1
+torchvision
+segmentation-models-pytorch
+rasterio
+opencv-python
+Pillow
+numpy
 
 # --- Person 3 additions ---
