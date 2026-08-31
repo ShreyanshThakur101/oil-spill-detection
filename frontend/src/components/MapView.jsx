@@ -11,10 +11,31 @@ export default function MapView({ detection, drift, vessels, selectedMmsi, onSel
   return (
     <div className="map-wrapper">
       <MapContainer center={center} zoom={zoom} className="leaflet-map" scrollWheelZoom={true}>
-        <TileLayer
-          attribution='&copy; <a href="https://carto.com/">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-        />
+        <LayersControl position="topright">
+          <LayersControl.BaseLayer checked name="OpenStreetMap">
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              maxZoom={19}
+            />
+          </LayersControl.BaseLayer>
+
+          <LayersControl.BaseLayer name="Ocean Basemap (Esri)">
+            <TileLayer
+              attribution="Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, National Geographic, Esri"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean/MapServer/tile/{z}/{y}/{x}"
+              maxZoom={13}
+            />
+          </LayersControl.BaseLayer>
+
+          <LayersControl.BaseLayer name="Satellite Imagery (Esri)">
+            <TileLayer
+              attribution="Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              maxZoom={18}
+            />
+          </LayersControl.BaseLayer>
+        </LayersControl>
 
         {drift && <DriftLayer geojson={drift.origin_polygon_geojson} />}
         {detection && <SlickLayer geojson={detection.polygon_geojson} />}
