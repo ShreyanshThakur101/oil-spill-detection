@@ -17,3 +17,6 @@ Pillow
 numpy
 
 # --- Person 3 additions ---
+opendrift==1.14.11
+# --- Person 3 additions ---
+opendrift==1.14.11
