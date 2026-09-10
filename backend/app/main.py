@@ -62,8 +62,25 @@ def api_root():
 
 
 # Frontend static files serving & SPA fallback
-frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
-if frontend_dist.exists() and (frontend_dist / "index.html").exists():
+def find_frontend_dist() -> Path | None:
+    """Locate frontend dist directory across local, packaged, and Vercel serverless environments."""
+    candidates = [
+        Path(__file__).resolve().parent / "dist",                             # backend/app/dist (bundled with package)
+        Path(__file__).resolve().parent.parent.parent / "frontend" / "dist",  # root/frontend/dist (local dev / monorepo)
+        Path.cwd() / "backend" / "app" / "dist",
+        Path.cwd() / "frontend" / "dist",
+        Path("/var/task/backend/app/dist"),
+        Path("/var/task/frontend/dist"),
+    ]
+    for c in candidates:
+        if c.exists() and (c / "index.html").exists():
+            return c
+    return None
+
+
+frontend_dist = find_frontend_dist()
+
+if frontend_dist:
     assets_dir = frontend_dist / "assets"
     if assets_dir.exists():
         app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
@@ -82,6 +99,7 @@ if frontend_dist.exists() and (frontend_dist / "index.html").exists():
         return FileResponse(frontend_dist / "index.html")
 else:
     @app.get("/")
+    @app.get("/index.html")
     def root():
         return {
             "title": "SAGAR-DRISHTI API",
@@ -89,4 +107,5 @@ else:
             "health": "/api/health",
             "cases": "/api/cases"
         }
+
 

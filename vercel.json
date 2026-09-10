@@ -1,9 +1,12 @@
 {
-  "buildCommand": "npm --prefix frontend install && npm --prefix frontend run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/index.py": {
       "includeFiles": "frontend/dist/**"
+    },
+    "**": {
+      "includeFiles": "backend/app/dist/**"
     }
   },
   "rewrites": [

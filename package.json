@@ -4,7 +4,7 @@
   "private": true,
   "description": "SAGAR-DRISHTI: Physics-Informed AI for Sentinel-1 SAR Oil Spill Detection and OpenDrift Trajectory Attribution",
   "scripts": {
-    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build && node -e \"const fs = require('fs'); fs.cpSync('frontend/dist', 'backend/app/dist', { recursive: true, force: true });\"",
     "start": "python run.py",
     "dev": "npm --prefix frontend run dev"
   }
