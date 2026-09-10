@@ -1,0 +1,11 @@
+{
+  "name": "oil-spill-detection",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SAGAR-DRISHTI: Physics-Informed AI for Sentinel-1 SAR Oil Spill Detection and OpenDrift Trajectory Attribution",
+  "scripts": {
+    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "start": "python run.py",
+    "dev": "npm --prefix frontend run dev"
+  }
+}
