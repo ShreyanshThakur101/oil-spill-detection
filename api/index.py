@@ -32,11 +32,30 @@ except Exception as e:
 # ASGI middleware wrapper to normalize Vercel serverless paths
 async def app(scope, receive, send):
     if scope.get("type") == "http":
-        headers = dict(scope.get("headers", []))
-        matched_path = headers.get(b"x-matched-path", b"").decode("utf-8")
+        qs = scope.get("query_string", b"").decode("utf-8")
         current_path = scope.get("path", "")
-        # If Vercel rewrote the path to /api/index.py or /api/index, restore original matched path
-        if matched_path and current_path in ("/api/index.py", "/api/index", "/api/index.py/"):
-            scope["path"] = matched_path
+
+        # 1. Handle query parameter rewrite from Vercel: /api/index.py?__path=cases
+        if "__path=" in qs:
+            from urllib.parse import parse_qs, urlencode
+            params = parse_qs(qs, keep_blank_values=True)
+            if "__path" in params:
+                subpath = params.pop("__path")[0]
+                # Reconstruct query string without __path
+                scope["query_string"] = urlencode(params, doseq=True).encode("utf-8")
+                clean_subpath = subpath.lstrip("/")
+                scope["path"] = f"/api/{clean_subpath}"
+        # 2. Handle x-matched-path or x-forwarded-uri headers
+        elif current_path in ("/api/index.py", "/api/index", "/api/index.py/"):
+            headers = dict(scope.get("headers", []))
+            matched_path = headers.get(b"x-matched-path", b"").decode("utf-8")
+            if not matched_path:
+                matched_path = headers.get(b"x-forwarded-uri", b"").decode("utf-8")
+            if matched_path and matched_path not in ("/api/index.py", "/api/index"):
+                scope["path"] = matched_path
+            else:
+                scope["path"] = "/api"
+
     await fastapi_app(scope, receive, send)
+
 
