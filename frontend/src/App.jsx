@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { listCases, runPipeline } from "./api/client";
+import { listCases, runPipeline, getDossier } from "./api/client";
 import CaseSelector from "./components/CaseSelector";
 import MapView from "./components/MapView";
 import SuspectList from "./components/SuspectList";
 import ConfidencePanel from "./components/ConfidencePanel";
+import LegalDossierModal from "./components/LegalDossierModal";
+import NugenValidationModal from "./components/NugenValidationModal";
+import EconomicsModal from "./components/EconomicsModal";
+import MultiAgentModal from "./components/MultiAgentModal";
 
 export default function App() {
   const [cases, setCases] = useState([]);
@@ -12,6 +16,10 @@ export default function App() {
   const [selectedMmsi, setSelectedMmsi] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  // Modals state
+  const [activeModal, setActiveModal] = useState(null); // 'dossier', 'validation', 'economics', 'agents'
+  const [currentDossier, setCurrentDossier] = useState(null);
 
   useEffect(() => {
     async function fetchCases() {
@@ -39,6 +47,9 @@ export default function App() {
       if (result.vessels && result.vessels.length > 0) {
         setSelectedMmsi(result.vessels[0].mmsi);
       }
+      if (result.dossier) {
+        setCurrentDossier(result.dossier);
+      }
     } catch (err) {
       console.error("Pipeline run failed:", err);
       setError("Pipeline execution failed. Please check backend logs.");
@@ -47,19 +58,75 @@ export default function App() {
     }
   };
 
+  // Open dossier for a specific vessel
+  const handleOpenVesselDossier = async (vessel) => {
+    try {
+      const d = await getDossier(selectedCaseId, vessel.mmsi);
+      setCurrentDossier(d);
+      setActiveModal("dossier");
+    } catch (err) {
+      // Fallback to pipeline dossier
+      if (pipelineResult?.dossier) {
+        setCurrentDossier(pipelineResult.dossier);
+        setActiveModal("dossier");
+      }
+    }
+  };
+
+  const selectedVessel = pipelineResult?.vessels?.find((v) => v.mmsi === selectedMmsi);
+
   return (
     <div className="app-layout">
+      {/* SAGAR-DRISHTI Master Header */}
       <header className="app-header">
         <div className="header-brand">
-          <span className="brand-logo">🛰️</span>
-          <div>
-            <h1>Oil Spill Detection & Vessel Attribution</h1>
-            <p className="subtitle">Decision Support System for Marine Pollution Enforcement</p>
+          <div className="brand-badge-row">
+            <span className="badge-pccoe">PCCOE IGC 2026 • THEME 5: OCEAN & MARINE</span>
+            <span className="badge-sdg">UN SDG 13 & 14</span>
+            <span className="badge-target">TARGET: ICG MRCC • DG SHIPPING • SPCB</span>
+          </div>
+          <div className="brand-main-row">
+            <span className="brand-emblem">🛰️🌊</span>
+            <div>
+              <h1 className="brand-title">SAGAR-DRISHTI</h1>
+              <p className="brand-subtitle">
+                Physics-Informed AI for Oil Spill Detection & Vessel Attribution • Sentinel-1 SAR + OpenDrift + 6-Factor AIS + Nugen Aligned SLM
+              </p>
+            </div>
           </div>
         </div>
-        <div className="header-status">
-          <span className="status-indicator online"></span>
-          <span>System Ready</span>
+
+        {/* Global Action Navigation */}
+        <div className="header-controls">
+          <button
+            className="btn btn-nav btn-dossier"
+            onClick={() => setActiveModal("dossier")}
+            disabled={!pipelineResult?.dossier && !currentDossier}
+            title="Generate official ICG Maritime Enforcement Brief"
+          >
+            📜 Court-Ready Legal Dossier
+          </button>
+          <button
+            className="btn btn-nav"
+            onClick={() => setActiveModal("validation")}
+            title="Empirical Scientific Validation (Base Model vs Nugen Aligned SLM)"
+          >
+            🔬 Scientific Validation (Nugen Lift)
+          </button>
+          <button
+            className="btn btn-nav"
+            onClick={() => setActiveModal("economics")}
+            title="Operational Running Costs, Scalability & Competitive Moat"
+          >
+            💰 Economics & Moat (₹4–9/case)
+          </button>
+          <button
+            className="btn btn-nav"
+            onClick={() => setActiveModal("agents")}
+            title="Nugen Multi-Agent Orchestration Pipeline"
+          >
+            🤖 Multi-Agent Pipeline
+          </button>
         </div>
       </header>
 
@@ -70,7 +137,10 @@ export default function App() {
           <CaseSelector
             cases={cases}
             selectedCaseId={selectedCaseId}
-            onSelectCase={setSelectedCaseId}
+            onSelectCase={(id) => {
+              setSelectedCaseId(id);
+              setPipelineResult(null);
+            }}
             onRunPipeline={handleRun}
             loading={loading}
           />
@@ -79,11 +149,13 @@ export default function App() {
             vessels={pipelineResult?.vessels}
             selectedMmsi={selectedMmsi}
             onSelectVessel={setSelectedMmsi}
+            onOpenDossier={handleOpenVesselDossier}
           />
         </div>
 
         <div className="map-column">
           <MapView
+            caseId={selectedCaseId}
             detection={pipelineResult?.detection}
             drift={pipelineResult?.drift}
             vessels={pipelineResult?.vessels}
@@ -94,9 +166,36 @@ export default function App() {
           <ConfidencePanel
             detection={pipelineResult?.detection}
             drift={pipelineResult?.drift}
+            nugen={pipelineResult?.nugen}
           />
         </div>
       </main>
+
+      {/* Modals */}
+      {activeModal === "dossier" && (currentDossier || pipelineResult?.dossier) && (
+        <LegalDossierModal
+          dossier={currentDossier || pipelineResult.dossier}
+          onClose={() => setActiveModal(null)}
+        />
+      )}
+
+      {activeModal === "validation" && (
+        <NugenValidationModal
+          targetVessel={selectedVessel || pipelineResult?.vessels?.[0]}
+          onClose={() => setActiveModal(null)}
+        />
+      )}
+
+      {activeModal === "economics" && (
+        <EconomicsModal onClose={() => setActiveModal(null)} />
+      )}
+
+      {activeModal === "agents" && (
+        <MultiAgentModal
+          multiAgentData={pipelineResult?.nugen?.multi_agent}
+          onClose={() => setActiveModal(null)}
+        />
+      )}
     </div>
   );
 }

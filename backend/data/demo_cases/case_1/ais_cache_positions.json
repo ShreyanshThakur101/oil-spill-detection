@@ -1,0 +1,97 @@
+[
+  {
+    "mmsi": "354892000",
+    "vessel_name": "MSC ELSA III",
+    "vessel_type": "cargo",
+    "flag": "LR",
+    "flag_name": "Liberia",
+    "imo": 9324567,
+    "destination": "IN COK (COCHIN)",
+    "draft_m": 12.4,
+    "speed_drop_knots": 6.8,
+    "ais_gap_duration_mins": 42,
+    "gap_start": "2025-05-24T14:10:00Z",
+    "gap_end": "2025-05-24T14:52:00Z",
+    "gap_coordinates": [
+      [76.08, 9.58],
+      [76.15, 9.68]
+    ],
+    "positions": [
+      { "lat": 9.42, "lon": 75.92, "timestamp": "2025-05-24T13:00:00Z", "speed_knots": 15.2, "heading": 340 },
+      { "lat": 9.52, "lon": 76.02, "timestamp": "2025-05-24T13:45:00Z", "speed_knots": 15.0, "heading": 342 },
+      { "lat": 9.58, "lon": 76.08, "timestamp": "2025-05-24T14:10:00Z", "speed_knots": 8.4, "heading": 345 },
+      { "lat": 9.68, "lon": 76.15, "timestamp": "2025-05-24T14:52:00Z", "speed_knots": 8.5, "heading": 344 },
+      { "lat": 9.78, "lon": 76.20, "timestamp": "2025-05-24T15:35:00Z", "speed_knots": 14.8, "heading": 346 },
+      { "lat": 9.93, "lon": 76.25, "timestamp": "2025-05-24T16:45:00Z", "speed_knots": 11.2, "heading": 350 }
+    ]
+  },
+  {
+    "mmsi": "412345678",
+    "vessel_name": "MT OCEAN PIONEER",
+    "vessel_type": "tanker",
+    "flag": "PA",
+    "flag_name": "Panama",
+    "imo": 9418822,
+    "destination": "IN BOM (MUMBAI)",
+    "draft_m": 14.8,
+    "speed_drop_knots": 0.4,
+    "ais_gap_duration_mins": 20,
+    "positions": [
+      { "lat": 9.20, "lon": 75.55, "timestamp": "2025-05-24T12:00:00Z", "speed_knots": 13.8, "heading": 335 },
+      { "lat": 9.38, "lon": 75.68, "timestamp": "2025-05-24T13:30:00Z", "speed_knots": 13.6, "heading": 335 },
+      { "lat": 9.55, "lon": 75.80, "timestamp": "2025-05-24T15:00:00Z", "speed_knots": 13.4, "heading": 334 },
+      { "lat": 9.72, "lon": 75.92, "timestamp": "2025-05-24T16:30:00Z", "speed_knots": 13.5, "heading": 335 }
+    ]
+  },
+  {
+    "mmsi": "636015442",
+    "vessel_name": "CHEMSTAR VOYAGER",
+    "vessel_type": "tanker",
+    "flag": "MH",
+    "flag_name": "Marshall Islands",
+    "imo": 9520119,
+    "destination": "SG SIN (SINGAPORE)",
+    "draft_m": 11.0,
+    "speed_drop_knots": 0.2,
+    "ais_gap_duration_mins": 0,
+    "positions": [
+      { "lat": 9.85, "lon": 75.70, "timestamp": "2025-05-24T13:10:00Z", "speed_knots": 14.2, "heading": 158 },
+      { "lat": 9.65, "lon": 75.82, "timestamp": "2025-05-24T14:40:00Z", "speed_knots": 14.1, "heading": 156 },
+      { "lat": 9.45, "lon": 75.95, "timestamp": "2025-05-24T16:10:00Z", "speed_knots": 14.0, "heading": 157 }
+    ]
+  },
+  {
+    "mmsi": "563987123",
+    "vessel_name": "MV PACIFIC BREEZE",
+    "vessel_type": "cargo",
+    "flag": "SG",
+    "flag_name": "Singapore",
+    "imo": 9287411,
+    "destination": "LK CMB (COLOMBO)",
+    "draft_m": 10.5,
+    "speed_drop_knots": 0.5,
+    "ais_gap_duration_mins": 0,
+    "positions": [
+      { "lat": 9.80, "lon": 75.95, "timestamp": "2025-05-24T06:00:00Z", "speed_knots": 14.5, "heading": 160 },
+      { "lat": 9.60, "lon": 76.05, "timestamp": "2025-05-24T07:20:00Z", "speed_knots": 14.2, "heading": 162 },
+      { "lat": 9.40, "lon": 76.15, "timestamp": "2025-05-24T08:45:00Z", "speed_knots": 14.4, "heading": 160 }
+    ]
+  },
+  {
+    "mmsi": "235112449",
+    "vessel_name": "FV SEA FALCON",
+    "vessel_type": "fishing",
+    "flag": "IN",
+    "flag_name": "India",
+    "imo": 0,
+    "destination": "KOCHI HARBOUR",
+    "draft_m": 3.2,
+    "speed_drop_knots": 1.2,
+    "ais_gap_duration_mins": 0,
+    "positions": [
+      { "lat": 9.65, "lon": 76.18, "timestamp": "2025-05-24T18:00:00Z", "speed_knots": 7.8, "heading": 210 },
+      { "lat": 9.55, "lon": 76.12, "timestamp": "2025-05-24T19:30:00Z", "speed_knots": 6.5, "heading": 205 },
+      { "lat": 9.45, "lon": 76.08, "timestamp": "2025-05-24T21:00:00Z", "speed_knots": 7.2, "heading": 212 }
+    ]
+  }
+]

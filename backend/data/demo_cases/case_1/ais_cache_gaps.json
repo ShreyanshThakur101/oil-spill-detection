@@ -1,0 +1,22 @@
+[
+  {
+    "mmsi": "354892000",
+    "vessel_name": "MSC ELSA III",
+    "gap_start": "2025-05-24T14:10:00Z",
+    "gap_end": "2025-05-24T14:52:00Z",
+    "gap_hours": 0.7,
+    "gap_minutes": 42,
+    "deliberate_flag": true,
+    "notes": "Transponder power-down anomaly coinciding precisely with backward drift cone origin window."
+  },
+  {
+    "mmsi": "412345678",
+    "vessel_name": "MT OCEAN PIONEER",
+    "gap_start": "2025-05-24T06:15:00Z",
+    "gap_end": "2025-05-24T06:35:00Z",
+    "gap_hours": 0.33,
+    "gap_minutes": 20,
+    "deliberate_flag": false,
+    "notes": "Routine terrestrial receiver coverage gap off Alappuzha."
+  }
+]

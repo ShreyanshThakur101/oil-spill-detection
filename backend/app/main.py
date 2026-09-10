@@ -17,9 +17,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Oil Spill Detection and Vessel Attribution API",
-    description="Decision-support system combining SAR segmentation, backward drift modeling, and AIS vessel attribution.",
-    version="0.1.0",
+    title="SAGAR-DRISHTI API",
+    description="Physics-Informed AI for Oil Spill Detection & Vessel Attribution (PCCOE IGC 2026).",
+    version="1.0.0",
     lifespan=lifespan
 )
 

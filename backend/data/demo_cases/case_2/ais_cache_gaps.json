@@ -1,0 +1,12 @@
+[
+  {
+    "mmsi": "538009871",
+    "vessel_name": "MT ARABIAN GLORY",
+    "gap_start": "2025-07-11T18:15:00Z",
+    "gap_end": "2025-07-11T19:25:00Z",
+    "gap_hours": 1.16,
+    "gap_minutes": 70,
+    "deliberate_flag": true,
+    "notes": "Deliberate AIS transponder blackout observed while de-ballasting heavy bunker sludge off Mumbai High approach."
+  }
+]

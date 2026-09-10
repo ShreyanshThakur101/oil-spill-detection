@@ -3,7 +3,6 @@ Shared geographic and geometric utilities (Person 1 owned).
 """
 import math
 from typing import Any, Dict, List, Tuple
-import pyproj
 from shapely.geometry import MultiPoint, MultiPolygon, Polygon, mapping, shape
 from shapely.ops import transform as shapely_transform
 
@@ -33,7 +32,7 @@ def geojson_polygon_from_mask(mask, transform, crs: str = "EPSG:4326") -> dict:
         if len(polygons) == 1:
             return mapping(polygons[0])
         return mapping(MultiPolygon(polygons))
-    except ImportError:
+    except (ImportError, Exception):
         # Fallback using pixel coordinates and shapely
         coords_y, coords_x = np.where(mask_arr > 0)
         points = []
@@ -58,13 +57,26 @@ def geojson_polygon_from_mask(mask, transform, crs: str = "EPSG:4326") -> dict:
 
 def _get_projector_to_equal_area(geom):
     """
-    Construct a pyproj coordinate transformation from EPSG:4326 to a local
-    Lambert Azimuthal Equal Area (LAEA) projection centered at geometry centroid.
+    Construct a coordinate transformation from EPSG:4326 to equal area metric projection.
+    Uses pyproj LAEA when installed, or metric degree conversion centered at centroid.
     """
     centroid = geom.centroid
-    proj_laea = f"+proj=laea +lat_0={centroid.y} +lon_0={centroid.x} +datum=WGS84 +units=m +no_defs"
-    transformer = pyproj.Transformer.from_crs("EPSG:4326", proj_laea, always_xy=True)
-    return transformer.transform
+    try:
+        import pyproj
+        proj_laea = f"+proj=laea +lat_0={centroid.y} +lon_0={centroid.x} +datum=WGS84 +units=m +no_defs"
+        transformer = pyproj.Transformer.from_crs("EPSG:4326", proj_laea, always_xy=True)
+        return transformer.transform
+    except ImportError:
+        cos_lat = max(0.01, math.cos(math.radians(centroid.y)))
+        scale_x = 111320.0 * cos_lat
+        scale_y = 111000.0
+
+        def _fallback_project(x, y, z=None):
+            if isinstance(x, (list, tuple)):
+                return [(xi - centroid.x) * scale_x for xi in x], [(yi - centroid.y) * scale_y for yi in y]
+            return (x - centroid.x) * scale_x, (y - centroid.y) * scale_y
+
+        return _fallback_project
 
 
 def polygon_area_km2(polygon_geojson: dict) -> float:

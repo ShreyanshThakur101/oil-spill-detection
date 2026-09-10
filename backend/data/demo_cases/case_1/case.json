@@ -1,12 +1,19 @@
 {
-  "name": "Case 1 \u2014 2025 Kerala Coast (MSC Elsa III)",
-  "description": "Publicly documented bunker spill incident off Kochi/Kerala coast in May 2025. Sentinel-1 SAR acquisition captured slick spread along coastal shipping lanes.",
+  "name": "Case 1 — Kochi Port Approaches (MSC Elsa III)",
+  "description": "Bunker oil spill incident off Kochi port approach, Kerala (May 2025). High-density shipping corridor intersecting 34 transiting commercial vessels in the Arabian Sea.",
   "sar_image_path": "data/raw/sentinel1/case_1_scene.tif",
-  "image_timestamp": "2025-05-26T03:00:00Z",
+  "image_timestamp": "2025-05-25T08:30:00Z",
+  "spill_timestamp": "2025-05-24T14:32:00Z",
+  "incident_ref": "ICG-MRCC-KCH-2025-0526-SD01",
+  "port_of_detention": "Port of Cochin",
+  "slick_coords": [9.9312, 76.2673],
+  "slick_area_km2": 14.8,
+  "detection_iou": 0.892,
+  "inference_time_sec": 3.8,
   "bbox": [
-    74.0,
-    8.5,
-    77.5,
-    11.0
+    75.40,
+    9.20,
+    76.50,
+    10.30
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "name": "Case 2 — Mumbai Port Approaches (JNPT / Mumbai High)",
+  "description": "Crude oil bunker discharge detected along the primary crude tanker transit fairway off JNPT / Mumbai High corridor. Southward monsoon current drift towards Konkan coastline.",
+  "sar_image_path": "data/raw/sentinel1/case_2_scene.tif",
+  "image_timestamp": "2025-07-12T06:15:00Z",
+  "spill_timestamp": "2025-07-11T18:45:00Z",
+  "incident_ref": "ICG-MRCC-BOM-2025-0712-SD02",
+  "port_of_detention": "Jawaharlal Nehru Port (JNPT)",
+  "slick_coords": [18.8214, 72.6541],
+  "slick_area_km2": 19.6,
+  "detection_iou": 0.914,
+  "inference_time_sec": 4.1,
+  "bbox": [
+    72.10,
+    18.20,
+    73.10,
+    19.30
+  ]
+}

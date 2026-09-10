@@ -1,0 +1,62 @@
+[
+  {
+    "mmsi": "538009871",
+    "vessel_name": "MT ARABIAN GLORY",
+    "vessel_type": "tanker",
+    "flag": "MH",
+    "flag_name": "Marshall Islands",
+    "imo": 9481239,
+    "destination": "IN JNP (JNPT MUMBAI)",
+    "draft_m": 15.6,
+    "speed_drop_knots": 7.4,
+    "ais_gap_duration_mins": 70,
+    "gap_start": "2025-07-11T18:15:00Z",
+    "gap_end": "2025-07-11T19:25:00Z",
+    "gap_coordinates": [
+      [72.58, 18.72],
+      [72.64, 18.80]
+    ],
+    "positions": [
+      { "lat": 18.55, "lon": 72.45, "timestamp": "2025-07-11T16:30:00Z", "speed_knots": 14.8, "heading": 30 },
+      { "lat": 18.66, "lon": 72.52, "timestamp": "2025-07-11T17:45:00Z", "speed_knots": 14.5, "heading": 32 },
+      { "lat": 18.72, "lon": 72.58, "timestamp": "2025-07-11T18:15:00Z", "speed_knots": 7.1, "heading": 35 },
+      { "lat": 18.80, "lon": 72.64, "timestamp": "2025-07-11T19:25:00Z", "speed_knots": 7.2, "heading": 34 },
+      { "lat": 18.90, "lon": 72.72, "timestamp": "2025-07-11T20:45:00Z", "speed_knots": 13.9, "heading": 35 },
+      { "lat": 18.98, "lon": 72.82, "timestamp": "2025-07-11T22:00:00Z", "speed_knots": 9.5, "heading": 40 }
+    ]
+  },
+  {
+    "mmsi": "311000214",
+    "vessel_name": "MV MAHARASHTRA STAR",
+    "vessel_type": "cargo",
+    "flag": "IN",
+    "flag_name": "India",
+    "imo": 9345112,
+    "destination": "IN KAN (KANDLA)",
+    "draft_m": 11.2,
+    "speed_drop_knots": 0.3,
+    "ais_gap_duration_mins": 0,
+    "positions": [
+      { "lat": 18.50, "lon": 72.25, "timestamp": "2025-07-11T17:00:00Z", "speed_knots": 15.0, "heading": 345 },
+      { "lat": 18.75, "lon": 72.28, "timestamp": "2025-07-11T18:40:00Z", "speed_knots": 14.8, "heading": 345 },
+      { "lat": 19.00, "lon": 72.32, "timestamp": "2025-07-11T20:20:00Z", "speed_knots": 15.1, "heading": 345 }
+    ]
+  },
+  {
+    "mmsi": "636019941",
+    "vessel_name": "MT NORDIC BREEZE",
+    "vessel_type": "tanker",
+    "flag": "LR",
+    "flag_name": "Liberia",
+    "imo": 9612044,
+    "destination": "IN SIK (SIKKA)",
+    "draft_m": 16.2,
+    "speed_drop_knots": 0.6,
+    "ais_gap_duration_mins": 15,
+    "positions": [
+      { "lat": 18.60, "lon": 72.35, "timestamp": "2025-07-11T14:00:00Z", "speed_knots": 13.5, "heading": 330 },
+      { "lat": 18.82, "lon": 72.48, "timestamp": "2025-07-11T16:00:00Z", "speed_knots": 13.2, "heading": 332 },
+      { "lat": 19.05, "lon": 72.60, "timestamp": "2025-07-11T18:00:00Z", "speed_knots": 13.4, "heading": 330 }
+    ]
+  }
+]

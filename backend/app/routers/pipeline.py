@@ -1,137 +1,107 @@
 """
-Pipeline router executing detection, backward drift, and vessel attribution.
+Pipeline & Nugen Decision Engine router.
+Endpoints for pipeline execution, Nugen inference, scientific benchmarks, and legal dossiers.
 """
-from fastapi import APIRouter, Depends, HTTPException
+from typing import Any, Dict, Optional
+from fastapi import APIRouter, Depends, HTTPException, Query, Body
 from sqlalchemy.orm import Session
+
 from ..database import get_db
 from ..models import Case
+from ..pipeline.orchestrator import run_full_pipeline, _get_case_metadata
+from ..nugen.client import invoke_nugen_inference
+from ..nugen.benchmarks import get_benchmark_report
+from ..nugen.dossier_generator import generate_icg_enforcement_dossier
 
-router = APIRouter(tags=["Pipeline"])
-
-
-def _mock_pipeline_result(case_id: int) -> dict:
-    """
-    TEMPORARY Mock result matching the exact shape orchestrator.run_full_pipeline() returns
-    (ARCHITECTURE.md section 5.5).
-    """
-    return {
-        "detection": {
-            "polygon_geojson": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [76.02, 9.51],
-                        [76.12, 9.53],
-                        [76.15, 9.62],
-                        [76.04, 9.60],
-                        [76.02, 9.51]
-                    ]
-                ]
-            },
-            "confidence": 0.89,
-            "shape_features": {
-                "area_km2": 12.3,
-                "perimeter_km": 8.1,
-                "elongation": 2.4,
-                "fragment_count": 1,
-                "age_class": "fresh"
-            }
-        },
-        "drift": {
-            "origin_polygon_geojson": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [75.88, 9.38],
-                        [76.04, 9.40],
-                        [76.06, 9.54],
-                        [75.90, 9.52],
-                        [75.88, 9.38]
-                    ]
-                ]
-            },
-            "estimated_origin_time": "2025-05-25T22:00:00Z",
-            "uncertainty_radius_km": 6.2
-        },
-        "vessels": [
-            {
-                "mmsi": "412345678",
-                "vessel_name": "MT OCEAN PIONEER",
-                "vessel_type": "Tanker",
-                "track_geojson": {
-                    "type": "LineString",
-                    "coordinates": [
-                        [75.75, 9.25],
-                        [75.88, 9.38],
-                        [75.96, 9.46],
-                        [76.08, 9.58]
-                    ]
-                },
-                "scores": {
-                    "proximity": 0.92,
-                    "parity": 0.78,
-                    "temporality": 0.85,
-                    "ais_gap": 0.90,
-                    "speed_anomaly": 0.20,
-                    "vessel_type_prior": 0.85
-                },
-                "final_score": 0.82,
-                "explanation": "High proximity (2.1 km) to backward drift origin; 2.4 hr AIS transmission gap overlapping release window; Tanker class has elevated prior likelihood."
-            },
-            {
-                "mmsi": "563987123",
-                "vessel_name": "MV PACIFIC BREEZE",
-                "vessel_type": "Cargo",
-                "track_geojson": {
-                    "type": "LineString",
-                    "coordinates": [
-                        [75.60, 9.15],
-                        [75.78, 9.30],
-                        [75.92, 9.42],
-                        [76.10, 9.52]
-                    ]
-                },
-                "scores": {
-                    "proximity": 0.65,
-                    "parity": 0.50,
-                    "temporality": 0.60,
-                    "ais_gap": 0.10,
-                    "speed_anomaly": 0.15,
-                    "vessel_type_prior": 0.40
-                },
-                "final_score": 0.46,
-                "explanation": "Transited through secondary boundary of search bbox; constant speed; no AIS broadcast gap."
-            },
-            {
-                "mmsi": "235112449",
-                "vessel_name": "FV SEA FALCON",
-                "vessel_type": "Fishing",
-                "track_geojson": {
-                    "type": "LineString",
-                    "coordinates": [
-                        [76.05, 9.60],
-                        [76.12, 9.65],
-                        [76.08, 9.70]
-                    ]
-                },
-                "scores": {
-                    "proximity": 0.30,
-                    "parity": 0.20,
-                    "temporality": 0.35,
-                    "ais_gap": 0.05,
-                    "speed_anomaly": 0.45,
-                    "vessel_type_prior": 0.15
-                },
-                "final_score": 0.24,
-                "explanation": "Fishing vessel located downstream of origin; low correlation with estimated discharge time."
-            }
-        ]
-    }
+router = APIRouter(tags=["Pipeline & Nugen Engine"])
 
 
 @router.post("/cases/{case_id}/run")
 def run_pipeline(case_id: int, db: Session = Depends(get_db)):
-    c = db.query(Case).filter(Case.id == case_id).first()
-    if not c:
+    """
+    Trigger end-to-end SAGAR-DRISHTI pipeline execution for a selected demo case.
+    """
+    case = db.query(Case).filter(Case.id == case_id).first()
+    if not case:
         raise HTTPException(status_code=404, detail="Case not found")
-    return _mock_pipeline_result(case_id)
+    try:
+        result = run_full_pipeline(case_id, db)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Pipeline execution failed: {str(e)}")
+
+
+@router.post("/cases/{case_id}/dossier")
+def get_case_dossier(
+    case_id: int,
+    mmsi: Optional[str] = Query(None),
+    db: Session = Depends(get_db)
+):
+    """
+    Generate or export the court-ready ICG maritime enforcement dossier for a specific suspect vessel.
+    """
+    case = db.query(Case).filter(Case.id == case_id).first()
+    if not case:
+        raise HTTPException(status_code=404, detail="Case not found")
+    try:
+        pipeline_res = run_full_pipeline(case_id, db)
+        vessels = pipeline_res.get("vessels", [])
+        
+        target_vessel = None
+        if mmsi:
+            for v in vessels:
+                if str(v.get("mmsi")) == str(mmsi):
+                    target_vessel = v
+                    break
+        if not target_vessel and vessels:
+            target_vessel = vessels[0]
+
+        if not target_vessel:
+            raise HTTPException(status_code=400, detail="No vessel telemetry available to generate dossier")
+
+        meta = _get_case_metadata(case)
+        dossier = generate_icg_enforcement_dossier(
+            case_data=meta,
+            detection_data=pipeline_res.get("detection", {}),
+            drift_data=pipeline_res.get("drift", {}),
+            suspect_vessel=target_vessel,
+            nugen_inference=pipeline_res.get("nugen", {}).get("inference", {})
+        )
+        return dossier
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Dossier generation failed: {str(e)}")
+
+
+@router.post("/nugen/inference")
+def nugen_inference_endpoint(payload: Dict[str, Any] = Body(...)):
+    """
+    Direct Nugen Domain-Aligned SLM inference endpoint matching Slide 6 contract.
+    Accepts: model, domain, slick_coords, spill_timestamp, suspect_vessel, jurisdiction.
+    """
+    try:
+        slick_coords = payload.get("slick_coords", [9.9312, 76.2673])
+        spill_timestamp = payload.get("spill_timestamp", "2025-05-24T14:30:00Z")
+        suspect_vessel = payload.get("suspect_vessel", {})
+        jurisdiction = payload.get("jurisdiction", "Merchant_Shipping_Act_1958")
+        model = payload.get("model", "nugen-maritime-aligned-phi3")
+        domain = payload.get("domain", "indian_eez_enforcement")
+
+        res = invoke_nugen_inference(
+            slick_coords=slick_coords,
+            spill_timestamp=spill_timestamp,
+            suspect_vessel=suspect_vessel,
+            jurisdiction=jurisdiction,
+            model=model,
+            domain=domain
+        )
+        return res
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Nugen inference call failed: {str(e)}")
+
+
+@router.get("/nugen/benchmark")
+def nugen_benchmark():
+    """
+    Retrieve Slide 7 Scientific Validation benchmarks: Base Model vs Nugen Aligned Maritime SLM.
+    """
+    return get_benchmark_report()
