@@ -1,5 +1,5 @@
 """
-Unit tests for vessel scoring and attribution (Person 3): scoring/features.py, scoring/scorer.py.
+Unit tests for vessel scoring and attribution: scoring/features.py, scoring/scorer.py.
 """
 from datetime import datetime, timezone
 import pytest

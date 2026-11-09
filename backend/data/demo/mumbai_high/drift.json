@@ -1,0 +1,164 @@
+[
+  {
+    "detection_id": "det_mh_001",
+    "scenario_id": "mumbai_high",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.344,
+              19.329
+            ],
+            [
+              71.4,
+              19.329
+            ],
+            [
+              71.4,
+              19.373
+            ],
+            [
+              71.344,
+              19.373
+            ],
+            [
+              71.344,
+              19.329
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_mh_001",
+        "scenario_id": "mumbai_high"
+      }
+    },
+    "estimated_origin_time": "2025-05-13T12:12:00Z",
+    "origin_window_start": "2025-05-13T11:57:00Z",
+    "origin_window_end": "2025-05-13T12:27:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-05-13T12:12:00Z",
+        "position": {
+          "lat": 19.351,
+          "lon": 71.372
+        }
+      },
+      {
+        "timestamp": "2025-05-13T18:12:00Z",
+        "position": {
+          "lat": 19.367,
+          "lon": 71.393
+        }
+      },
+      {
+        "timestamp": "2025-05-14T00:12:00Z",
+        "position": {
+          "lat": 19.383,
+          "lon": 71.414
+        }
+      },
+      {
+        "timestamp": "2025-05-14T06:12:00Z",
+        "position": {
+          "lat": 19.399,
+          "lon": 71.435
+        }
+      }
+    ],
+    "uncertainty_km": 2.86,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.69,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 11.4,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "detection_id": "det_mh_002",
+    "scenario_id": "mumbai_high",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.52,
+              19.47
+            ],
+            [
+              71.576,
+              19.47
+            ],
+            [
+              71.576,
+              19.514
+            ],
+            [
+              71.52,
+              19.514
+            ],
+            [
+              71.52,
+              19.47
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_mh_002",
+        "scenario_id": "mumbai_high"
+      }
+    },
+    "estimated_origin_time": "2025-05-15T12:18:00Z",
+    "origin_window_start": "2025-05-15T12:03:00Z",
+    "origin_window_end": "2025-05-15T12:33:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-05-15T12:18:00Z",
+        "position": {
+          "lat": 19.492,
+          "lon": 71.548
+        }
+      },
+      {
+        "timestamp": "2025-05-15T18:18:00Z",
+        "position": {
+          "lat": 19.50567,
+          "lon": 71.57022
+        }
+      },
+      {
+        "timestamp": "2025-05-16T00:18:00Z",
+        "position": {
+          "lat": 19.51933,
+          "lon": 71.59244
+        }
+      },
+      {
+        "timestamp": "2025-05-16T06:18:00Z",
+        "position": {
+          "lat": 19.533,
+          "lon": 71.61467
+        }
+      }
+    ],
+    "uncertainty_km": 2.48,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.64,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 10.7,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  }
+]

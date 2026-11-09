@@ -1,0 +1,116 @@
+[
+  {
+    "id": "det_pr_001",
+    "scene_id": "scene_pr_001",
+    "scenario_id": "paradip",
+    "sector": "Paradip \u2014 crude anchorage",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              86.742,
+              20.218
+            ],
+            [
+              86.795,
+              20.211
+            ],
+            [
+              86.823,
+              20.244
+            ],
+            [
+              86.806,
+              20.279
+            ],
+            [
+              86.759,
+              20.272
+            ],
+            [
+              86.733,
+              20.244
+            ],
+            [
+              86.742,
+              20.218
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_pr_001",
+        "scenario_id": "paradip",
+        "sector": "Paradip \u2014 crude anchorage"
+      }
+    },
+    "confidence": 0.928,
+    "area_sqkm": 6.2,
+    "perimeter_km": 15.8,
+    "elongation": 3.2,
+    "fragment_count": 1,
+    "age_class": "fresh",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "det_pr_002",
+    "scene_id": "scene_pr_002",
+    "scenario_id": "paradip",
+    "sector": "Paradip \u2014 Gahirmatha approach",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              86.988,
+              20.418
+            ],
+            [
+              87.041,
+              20.411
+            ],
+            [
+              87.069,
+              20.444
+            ],
+            [
+              87.052,
+              20.479
+            ],
+            [
+              87.005,
+              20.472
+            ],
+            [
+              86.979,
+              20.444
+            ],
+            [
+              86.988,
+              20.418
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_pr_002",
+        "scenario_id": "paradip",
+        "sector": "Paradip \u2014 Gahirmatha approach"
+      }
+    },
+    "confidence": 0.859,
+    "area_sqkm": 2.4,
+    "perimeter_km": 7.9,
+    "elongation": 1.9,
+    "fragment_count": 1,
+    "age_class": "aging",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

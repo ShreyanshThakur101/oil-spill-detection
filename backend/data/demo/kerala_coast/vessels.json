@@ -1,0 +1,143 @@
+[
+  {
+    "vessel_id": "vsl_kc_001",
+    "mmsi": "419403320",
+    "name": "MT Lakshadweep Voyager",
+    "call_sign": "AVLV",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Product",
+    "length_m": 184,
+    "gross_tonnage": 41700,
+    "position": {
+      "lat": 9.581,
+      "lon": 75.336
+    },
+    "timestamp": "2025-05-25T06:14:00Z",
+    "destination": "Port of Cochin",
+    "detection_id": "det_kc_001",
+    "rank": 1,
+    "attribution_score": 0.9,
+    "drift_overlap_confidence": 0.89,
+    "ais_gap_minutes": 33,
+    "speed_drop_knots": 4.7,
+    "track": [
+      {
+        "timestamp": "2025-05-25T06:14:00Z",
+        "position": {
+          "lat": 9.531,
+          "lon": 75.266
+        }
+      },
+      {
+        "timestamp": "2025-05-25T06:14:00Z",
+        "position": {
+          "lat": 9.561,
+          "lon": 75.306
+        }
+      },
+      {
+        "timestamp": "2025-05-25T06:14:00Z",
+        "position": {
+          "lat": 9.581,
+          "lon": 75.336
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_kc_002",
+    "mmsi": "636033445",
+    "name": "MV Malabar Crest",
+    "call_sign": "D5MC8",
+    "flag": "LR",
+    "flag_name": "Liberia",
+    "type": "Bulk Carrier",
+    "length_m": 206,
+    "gross_tonnage": 49800,
+    "position": {
+      "lat": 9.301,
+      "lon": 75.602
+    },
+    "timestamp": "2025-05-27T06:20:00Z",
+    "destination": "Vizhinjam",
+    "detection_id": "det_kc_002",
+    "rank": 2,
+    "attribution_score": 0.61,
+    "drift_overlap_confidence": 0.66,
+    "ais_gap_minutes": 14,
+    "speed_drop_knots": 1.9,
+    "track": [
+      {
+        "timestamp": "2025-05-27T06:20:00Z",
+        "position": {
+          "lat": 9.251,
+          "lon": 75.532
+        }
+      },
+      {
+        "timestamp": "2025-05-27T06:20:00Z",
+        "position": {
+          "lat": 9.281,
+          "lon": 75.572
+        }
+      },
+      {
+        "timestamp": "2025-05-27T06:20:00Z",
+        "position": {
+          "lat": 9.301,
+          "lon": 75.602
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_kc_003",
+    "mmsi": "419403788",
+    "name": "MT Cochin Trader",
+    "call_sign": "AVCT",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Chemical",
+    "length_m": 158,
+    "gross_tonnage": 16400,
+    "position": {
+      "lat": 9.312,
+      "lon": 75.648
+    },
+    "timestamp": "2025-05-27T06:28:00Z",
+    "destination": "Kochi Refinery",
+    "detection_id": "det_kc_002",
+    "rank": 3,
+    "attribution_score": 0.33,
+    "drift_overlap_confidence": 0.41,
+    "ais_gap_minutes": 4,
+    "speed_drop_knots": 0.5,
+    "track": [
+      {
+        "timestamp": "2025-05-27T06:28:00Z",
+        "position": {
+          "lat": 9.262,
+          "lon": 75.578
+        }
+      },
+      {
+        "timestamp": "2025-05-27T06:28:00Z",
+        "position": {
+          "lat": 9.292,
+          "lon": 75.618
+        }
+      },
+      {
+        "timestamp": "2025-05-27T06:28:00Z",
+        "position": {
+          "lat": 9.312,
+          "lon": 75.648
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  }
+]

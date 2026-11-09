@@ -122,6 +122,7 @@ export default function MapView({
           <LayersControl.Overlay checked name="Indian Coast Guard Cutters & 12NM Sea Limit">
             <ICGCuttersLayer caseId={caseId} />
           </LayersControl.Overlay>
+
         </LayersControl>
       </MapContainer>
 

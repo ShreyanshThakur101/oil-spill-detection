@@ -14,13 +14,13 @@ export default function CaseSelector({
       <div className="card-header">
         <div>
           <h2>Target Spill Incident</h2>
-          <span className="case-sub">Verified Historical Benchmark</span>
+          <span className="case-sub">Reference Benchmark Case</span>
         </div>
-        <span className="badge badge-success">PHASE 1 MVP</span>
+        <span className="badge badge-success">BENCHMARK</span>
       </div>
 
       <div className="form-group">
-        <label htmlFor="case-select">Select EEZ Incident Corridor:</label>
+        <label htmlFor="case-select">Select incident corridor</label>
         <select
           id="case-select"
           value={selectedCaseId || ""}

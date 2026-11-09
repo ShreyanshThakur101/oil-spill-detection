@@ -1,0 +1,143 @@
+[
+  {
+    "vessel_id": "vsl_an_001",
+    "mmsi": "419505612",
+    "name": "MT Andaman Sentinel",
+    "call_sign": "AVAS",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Crude Oil",
+    "length_m": 221,
+    "gross_tonnage": 96200,
+    "position": {
+      "lat": 11.951,
+      "lon": 92.826
+    },
+    "timestamp": "2025-02-18T04:51:00Z",
+    "destination": "Port Blair",
+    "detection_id": "det_an_001",
+    "rank": 1,
+    "attribution_score": 0.88,
+    "drift_overlap_confidence": 0.9,
+    "ais_gap_minutes": 52,
+    "speed_drop_knots": 5.4,
+    "track": [
+      {
+        "timestamp": "2025-02-18T04:51:00Z",
+        "position": {
+          "lat": 11.901,
+          "lon": 92.756
+        }
+      },
+      {
+        "timestamp": "2025-02-18T04:51:00Z",
+        "position": {
+          "lat": 11.931,
+          "lon": 92.796
+        }
+      },
+      {
+        "timestamp": "2025-02-18T04:51:00Z",
+        "position": {
+          "lat": 11.951,
+          "lon": 92.826
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_an_002",
+    "mmsi": "563052210",
+    "name": "MV Bay of Bengal Star",
+    "call_sign": "9VBS4",
+    "flag": "SG",
+    "flag_name": "Singapore",
+    "type": "General Cargo",
+    "length_m": 178,
+    "gross_tonnage": 22700,
+    "position": {
+      "lat": 12.351,
+      "lon": 93.132
+    },
+    "timestamp": "2025-02-20T04:57:00Z",
+    "destination": "Chennai",
+    "detection_id": "det_an_002",
+    "rank": 2,
+    "attribution_score": 0.59,
+    "drift_overlap_confidence": 0.63,
+    "ais_gap_minutes": 12,
+    "speed_drop_knots": 1.5,
+    "track": [
+      {
+        "timestamp": "2025-02-20T04:57:00Z",
+        "position": {
+          "lat": 12.301,
+          "lon": 93.062
+        }
+      },
+      {
+        "timestamp": "2025-02-20T04:57:00Z",
+        "position": {
+          "lat": 12.331,
+          "lon": 93.102
+        }
+      },
+      {
+        "timestamp": "2025-02-20T04:57:00Z",
+        "position": {
+          "lat": 12.351,
+          "lon": 93.132
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_an_003",
+    "mmsi": "419505977",
+    "name": "MT Nicobar Pioneer",
+    "call_sign": "AVNP",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Product",
+    "length_m": 164,
+    "gross_tonnage": 17100,
+    "position": {
+      "lat": 12.362,
+      "lon": 93.178
+    },
+    "timestamp": "2025-02-20T05:05:00Z",
+    "destination": "Haddo Anchorage",
+    "detection_id": "det_an_002",
+    "rank": 3,
+    "attribution_score": 0.31,
+    "drift_overlap_confidence": 0.39,
+    "ais_gap_minutes": 3,
+    "speed_drop_knots": 0.4,
+    "track": [
+      {
+        "timestamp": "2025-02-20T05:05:00Z",
+        "position": {
+          "lat": 12.312,
+          "lon": 93.108
+        }
+      },
+      {
+        "timestamp": "2025-02-20T05:05:00Z",
+        "position": {
+          "lat": 12.342,
+          "lon": 93.148
+        }
+      },
+      {
+        "timestamp": "2025-02-20T05:05:00Z",
+        "position": {
+          "lat": 12.362,
+          "lon": 93.178
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  }
+]

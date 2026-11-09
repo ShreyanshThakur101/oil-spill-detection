@@ -1,0 +1,143 @@
+[
+  {
+    "vessel_id": "vsl_mh_001",
+    "mmsi": "419100211",
+    "name": "MT Sagar Samrat",
+    "call_sign": "AVSM",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Crude Oil",
+    "length_m": 240,
+    "gross_tonnage": 109000,
+    "position": {
+      "lat": 19.404,
+      "lon": 71.418
+    },
+    "timestamp": "2025-05-14T06:21:00Z",
+    "destination": "Vadinar SPM",
+    "detection_id": "det_mh_001",
+    "rank": 1,
+    "attribution_score": 0.94,
+    "drift_overlap_confidence": 0.94,
+    "ais_gap_minutes": 38,
+    "speed_drop_knots": 5.9,
+    "track": [
+      {
+        "timestamp": "2025-05-14T06:21:00Z",
+        "position": {
+          "lat": 19.354,
+          "lon": 71.348
+        }
+      },
+      {
+        "timestamp": "2025-05-14T06:21:00Z",
+        "position": {
+          "lat": 19.384,
+          "lon": 71.388
+        }
+      },
+      {
+        "timestamp": "2025-05-14T06:21:00Z",
+        "position": {
+          "lat": 19.404,
+          "lon": 71.418
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_mh_002",
+    "mmsi": "636019882",
+    "name": "MT Ocean Meridian",
+    "call_sign": "D5QM7",
+    "flag": "LR",
+    "flag_name": "Liberia",
+    "type": "Tanker \u2014 Product",
+    "length_m": 183,
+    "gross_tonnage": 52400,
+    "position": {
+      "lat": 19.539,
+      "lon": 71.598
+    },
+    "timestamp": "2025-05-16T06:29:00Z",
+    "destination": "JNPT Mumbai",
+    "detection_id": "det_mh_002",
+    "rank": 2,
+    "attribution_score": 0.72,
+    "drift_overlap_confidence": 0.78,
+    "ais_gap_minutes": 22,
+    "speed_drop_knots": 3.2,
+    "track": [
+      {
+        "timestamp": "2025-05-16T06:29:00Z",
+        "position": {
+          "lat": 19.489,
+          "lon": 71.528
+        }
+      },
+      {
+        "timestamp": "2025-05-16T06:29:00Z",
+        "position": {
+          "lat": 19.519,
+          "lon": 71.568
+        }
+      },
+      {
+        "timestamp": "2025-05-16T06:29:00Z",
+        "position": {
+          "lat": 19.539,
+          "lon": 71.598
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_mh_003",
+    "mmsi": "419100377",
+    "name": "MV Kandla Pioneer",
+    "call_sign": "AVKP",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Bulk Carrier",
+    "length_m": 199,
+    "gross_tonnage": 38200,
+    "position": {
+      "lat": 19.548,
+      "lon": 71.646
+    },
+    "timestamp": "2025-05-16T06:34:00Z",
+    "destination": "Mumbai Port",
+    "detection_id": "det_mh_002",
+    "rank": 3,
+    "attribution_score": 0.41,
+    "drift_overlap_confidence": 0.55,
+    "ais_gap_minutes": 8,
+    "speed_drop_knots": 1.1,
+    "track": [
+      {
+        "timestamp": "2025-05-16T06:34:00Z",
+        "position": {
+          "lat": 19.498,
+          "lon": 71.576
+        }
+      },
+      {
+        "timestamp": "2025-05-16T06:34:00Z",
+        "position": {
+          "lat": 19.528,
+          "lon": 71.616
+        }
+      },
+      {
+        "timestamp": "2025-05-16T06:34:00Z",
+        "position": {
+          "lat": 19.548,
+          "lon": 71.646
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  }
+]

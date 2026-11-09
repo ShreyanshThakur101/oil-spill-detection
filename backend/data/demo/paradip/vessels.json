@@ -1,0 +1,143 @@
+[
+  {
+    "vessel_id": "vsl_pr_001",
+    "mmsi": "419302118",
+    "name": "MT Kalinga Tide",
+    "call_sign": "AVKT",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Crude Oil",
+    "length_m": 228,
+    "gross_tonnage": 104500,
+    "position": {
+      "lat": 20.251,
+      "lon": 86.754
+    },
+    "timestamp": "2025-03-11T05:41:00Z",
+    "destination": "Paradip Oil Jetty",
+    "detection_id": "det_pr_001",
+    "rank": 1,
+    "attribution_score": 0.93,
+    "drift_overlap_confidence": 0.93,
+    "ais_gap_minutes": 41,
+    "speed_drop_knots": 6.5,
+    "track": [
+      {
+        "timestamp": "2025-03-11T05:41:00Z",
+        "position": {
+          "lat": 20.201,
+          "lon": 86.684
+        }
+      },
+      {
+        "timestamp": "2025-03-11T05:41:00Z",
+        "position": {
+          "lat": 20.231,
+          "lon": 86.724
+        }
+      },
+      {
+        "timestamp": "2025-03-11T05:41:00Z",
+        "position": {
+          "lat": 20.251,
+          "lon": 86.754
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_pr_002",
+    "mmsi": "563045771",
+    "name": "MV Bengal Meridian",
+    "call_sign": "9VBM3",
+    "flag": "SG",
+    "flag_name": "Singapore",
+    "type": "Container Ship",
+    "length_m": 262,
+    "gross_tonnage": 71300,
+    "position": {
+      "lat": 20.451,
+      "lon": 87.0
+    },
+    "timestamp": "2025-03-13T05:47:00Z",
+    "destination": "Kolkata",
+    "detection_id": "det_pr_002",
+    "rank": 2,
+    "attribution_score": 0.64,
+    "drift_overlap_confidence": 0.7,
+    "ais_gap_minutes": 17,
+    "speed_drop_knots": 2.0,
+    "track": [
+      {
+        "timestamp": "2025-03-13T05:47:00Z",
+        "position": {
+          "lat": 20.401,
+          "lon": 86.93
+        }
+      },
+      {
+        "timestamp": "2025-03-13T05:47:00Z",
+        "position": {
+          "lat": 20.431,
+          "lon": 86.97
+        }
+      },
+      {
+        "timestamp": "2025-03-13T05:47:00Z",
+        "position": {
+          "lat": 20.451,
+          "lon": 87.0
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_pr_003",
+    "mmsi": "352001889",
+    "name": "MT Dhamra Express",
+    "call_sign": "3EDX8",
+    "flag": "PA",
+    "flag_name": "Panama",
+    "type": "Tanker \u2014 Product",
+    "length_m": 171,
+    "gross_tonnage": 21900,
+    "position": {
+      "lat": 20.462,
+      "lon": 87.046
+    },
+    "timestamp": "2025-03-13T05:55:00Z",
+    "destination": "Dhamra Port",
+    "detection_id": "det_pr_002",
+    "rank": 3,
+    "attribution_score": 0.35,
+    "drift_overlap_confidence": 0.44,
+    "ais_gap_minutes": 5,
+    "speed_drop_knots": 0.6,
+    "track": [
+      {
+        "timestamp": "2025-03-13T05:55:00Z",
+        "position": {
+          "lat": 20.412,
+          "lon": 86.976
+        }
+      },
+      {
+        "timestamp": "2025-03-13T05:55:00Z",
+        "position": {
+          "lat": 20.442,
+          "lon": 87.016
+        }
+      },
+      {
+        "timestamp": "2025-03-13T05:55:00Z",
+        "position": {
+          "lat": 20.462,
+          "lon": 87.046
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "vessel_id": "vsl_gc_001",
+    "mmsi": "419201455",
+    "name": "MT Hazira Spirit",
+    "call_sign": "AVHS",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Chemical",
+    "length_m": 176,
+    "gross_tonnage": 29800,
+    "position": {
+      "lat": 21.352,
+      "lon": 72.198
+    },
+    "timestamp": "2025-04-22T05:57:00Z",
+    "destination": "Hazira Terminal",
+    "detection_id": "det_gc_001",
+    "rank": 1,
+    "attribution_score": 0.91,
+    "drift_overlap_confidence": 0.92,
+    "ais_gap_minutes": 47,
+    "speed_drop_knots": 6.1,
+    "track": [
+      {
+        "timestamp": "2025-04-22T05:57:00Z",
+        "position": {
+          "lat": 21.302,
+          "lon": 72.128
+        }
+      },
+      {
+        "timestamp": "2025-04-22T05:57:00Z",
+        "position": {
+          "lat": 21.332,
+          "lon": 72.168
+        }
+      },
+      {
+        "timestamp": "2025-04-22T05:57:00Z",
+        "position": {
+          "lat": 21.352,
+          "lon": 72.198
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_gc_002",
+    "mmsi": "538007641",
+    "name": "MV Gulf Trader",
+    "call_sign": "V7GT2",
+    "flag": "MH",
+    "flag_name": "Marshall Islands",
+    "type": "Bulk Carrier",
+    "length_m": 210,
+    "gross_tonnage": 44100,
+    "position": {
+      "lat": 21.558,
+      "lon": 72.466
+    },
+    "timestamp": "2025-04-24T06:03:00Z",
+    "destination": "Mundra",
+    "detection_id": "det_gc_002",
+    "rank": 2,
+    "attribution_score": 0.68,
+    "drift_overlap_confidence": 0.74,
+    "ais_gap_minutes": 19,
+    "speed_drop_knots": 2.4,
+    "track": [
+      {
+        "timestamp": "2025-04-24T06:03:00Z",
+        "position": {
+          "lat": 21.508,
+          "lon": 72.396
+        }
+      },
+      {
+        "timestamp": "2025-04-24T06:03:00Z",
+        "position": {
+          "lat": 21.538,
+          "lon": 72.436
+        }
+      },
+      {
+        "timestamp": "2025-04-24T06:03:00Z",
+        "position": {
+          "lat": 21.558,
+          "lon": 72.466
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "vessel_id": "vsl_gc_003",
+    "mmsi": "419201902",
+    "name": "MT Bhavnagar Star",
+    "call_sign": "AVBS",
+    "flag": "IN",
+    "flag_name": "India",
+    "type": "Tanker \u2014 Product",
+    "length_m": 162,
+    "gross_tonnage": 18600,
+    "position": {
+      "lat": 21.566,
+      "lon": 72.512
+    },
+    "timestamp": "2025-04-24T06:11:00Z",
+    "destination": "Sikka Anchorage",
+    "detection_id": "det_gc_002",
+    "rank": 3,
+    "attribution_score": 0.37,
+    "drift_overlap_confidence": 0.48,
+    "ais_gap_minutes": 6,
+    "speed_drop_knots": 0.8,
+    "track": [
+      {
+        "timestamp": "2025-04-24T06:11:00Z",
+        "position": {
+          "lat": 21.516,
+          "lon": 72.442
+        }
+      },
+      {
+        "timestamp": "2025-04-24T06:11:00Z",
+        "position": {
+          "lat": 21.546,
+          "lon": 72.482
+        }
+      },
+      {
+        "timestamp": "2025-04-24T06:11:00Z",
+        "position": {
+          "lat": 21.566,
+          "lon": 72.512
+        }
+      }
+    ],
+    "provenance": "SIMULATED_DEMO"
+  }
+]

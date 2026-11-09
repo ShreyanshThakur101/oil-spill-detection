@@ -25,7 +25,9 @@ export default function SuspectList({
       <div className="card-header">
         <div>
           <h3>Ranked Evidence Scoreboard (6-Factor)</h3>
-          <p className="card-subtitle">34 transiting candidates screened • 32 ruled out via hydrodynamic drift</p>
+          <p className="card-subtitle">
+            Ranked against the backward drift envelope using six attribution factors
+          </p>
         </div>
         <span className="badge badge-info">{vessels.length} Correlated</span>
       </div>

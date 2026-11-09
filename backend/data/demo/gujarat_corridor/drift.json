@@ -1,0 +1,164 @@
+[
+  {
+    "detection_id": "det_gc_001",
+    "scenario_id": "gujarat_corridor",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.124,
+              21.275
+            ],
+            [
+              72.18,
+              21.275
+            ],
+            [
+              72.18,
+              21.319
+            ],
+            [
+              72.124,
+              21.319
+            ],
+            [
+              72.124,
+              21.275
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_gc_001",
+        "scenario_id": "gujarat_corridor"
+      }
+    },
+    "estimated_origin_time": "2025-04-21T11:48:00Z",
+    "origin_window_start": "2025-04-21T11:33:00Z",
+    "origin_window_end": "2025-04-21T12:03:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-04-21T11:48:00Z",
+        "position": {
+          "lat": 21.297,
+          "lon": 72.152
+        }
+      },
+      {
+        "timestamp": "2025-04-21T17:48:00Z",
+        "position": {
+          "lat": 21.31289,
+          "lon": 72.17444
+        }
+      },
+      {
+        "timestamp": "2025-04-21T23:48:00Z",
+        "position": {
+          "lat": 21.32878,
+          "lon": 72.19689
+        }
+      },
+      {
+        "timestamp": "2025-04-22T05:48:00Z",
+        "position": {
+          "lat": 21.34467,
+          "lon": 72.21933
+        }
+      }
+    ],
+    "uncertainty_km": 3.03,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.72,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 11.7,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "detection_id": "det_gc_002",
+    "scenario_id": "gujarat_corridor",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.39,
+              21.481
+            ],
+            [
+              72.446,
+              21.481
+            ],
+            [
+              72.446,
+              21.525
+            ],
+            [
+              72.39,
+              21.525
+            ],
+            [
+              72.39,
+              21.481
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_gc_002",
+        "scenario_id": "gujarat_corridor"
+      }
+    },
+    "estimated_origin_time": "2025-04-23T11:54:00Z",
+    "origin_window_start": "2025-04-23T11:39:00Z",
+    "origin_window_end": "2025-04-23T12:09:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-04-23T11:54:00Z",
+        "position": {
+          "lat": 21.503,
+          "lon": 72.418
+        }
+      },
+      {
+        "timestamp": "2025-04-23T17:54:00Z",
+        "position": {
+          "lat": 21.51889,
+          "lon": 72.44078
+        }
+      },
+      {
+        "timestamp": "2025-04-23T23:54:00Z",
+        "position": {
+          "lat": 21.53478,
+          "lon": 72.46356
+        }
+      },
+      {
+        "timestamp": "2025-04-24T05:54:00Z",
+        "position": {
+          "lat": 21.55067,
+          "lon": 72.48633
+        }
+      }
+    ],
+    "uncertainty_km": 2.44,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.64,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 10.7,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  }
+]

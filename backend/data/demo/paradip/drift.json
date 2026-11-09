@@ -1,0 +1,164 @@
+[
+  {
+    "detection_id": "det_pr_001",
+    "scenario_id": "paradip",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              86.682,
+              20.175
+            ],
+            [
+              86.738,
+              20.175
+            ],
+            [
+              86.738,
+              20.219
+            ],
+            [
+              86.682,
+              20.219
+            ],
+            [
+              86.682,
+              20.175
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_pr_001",
+        "scenario_id": "paradip"
+      }
+    },
+    "estimated_origin_time": "2025-03-10T11:32:00Z",
+    "origin_window_start": "2025-03-10T11:17:00Z",
+    "origin_window_end": "2025-03-10T11:47:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-03-10T11:32:00Z",
+        "position": {
+          "lat": 20.197,
+          "lon": 86.71
+        }
+      },
+      {
+        "timestamp": "2025-03-10T17:32:00Z",
+        "position": {
+          "lat": 20.21289,
+          "lon": 86.73211
+        }
+      },
+      {
+        "timestamp": "2025-03-10T23:32:00Z",
+        "position": {
+          "lat": 20.22878,
+          "lon": 86.75422
+        }
+      },
+      {
+        "timestamp": "2025-03-11T05:32:00Z",
+        "position": {
+          "lat": 20.24467,
+          "lon": 86.77633
+        }
+      }
+    ],
+    "uncertainty_km": 3.16,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.74,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 12.0,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "detection_id": "det_pr_002",
+    "scenario_id": "paradip",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              86.928,
+              20.375
+            ],
+            [
+              86.984,
+              20.375
+            ],
+            [
+              86.984,
+              20.419
+            ],
+            [
+              86.928,
+              20.419
+            ],
+            [
+              86.928,
+              20.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_pr_002",
+        "scenario_id": "paradip"
+      }
+    },
+    "estimated_origin_time": "2025-03-12T11:38:00Z",
+    "origin_window_start": "2025-03-12T11:23:00Z",
+    "origin_window_end": "2025-03-12T11:53:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-03-12T11:38:00Z",
+        "position": {
+          "lat": 20.397,
+          "lon": 86.956
+        }
+      },
+      {
+        "timestamp": "2025-03-12T17:38:00Z",
+        "position": {
+          "lat": 20.41289,
+          "lon": 86.97811
+        }
+      },
+      {
+        "timestamp": "2025-03-12T23:38:00Z",
+        "position": {
+          "lat": 20.42878,
+          "lon": 87.00022
+        }
+      },
+      {
+        "timestamp": "2025-03-13T05:38:00Z",
+        "position": {
+          "lat": 20.44467,
+          "lon": 87.02233
+        }
+      }
+    ],
+    "uncertainty_km": 2.33,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.62,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 10.5,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  }
+]

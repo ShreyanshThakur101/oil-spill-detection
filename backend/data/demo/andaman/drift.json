@@ -1,0 +1,164 @@
+[
+  {
+    "detection_id": "det_an_001",
+    "scenario_id": "andaman",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92.754,
+              11.875
+            ],
+            [
+              92.81,
+              11.875
+            ],
+            [
+              92.81,
+              11.919
+            ],
+            [
+              92.754,
+              11.919
+            ],
+            [
+              92.754,
+              11.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_an_001",
+        "scenario_id": "andaman"
+      }
+    },
+    "estimated_origin_time": "2025-02-17T10:42:00Z",
+    "origin_window_start": "2025-02-17T10:27:00Z",
+    "origin_window_end": "2025-02-17T10:57:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-02-17T10:42:00Z",
+        "position": {
+          "lat": 11.897,
+          "lon": 92.782
+        }
+      },
+      {
+        "timestamp": "2025-02-17T16:42:00Z",
+        "position": {
+          "lat": 11.91289,
+          "lon": 92.80344
+        }
+      },
+      {
+        "timestamp": "2025-02-17T22:42:00Z",
+        "position": {
+          "lat": 11.92878,
+          "lon": 92.82489
+        }
+      },
+      {
+        "timestamp": "2025-02-18T04:42:00Z",
+        "position": {
+          "lat": 11.94467,
+          "lon": 92.84633
+        }
+      }
+    ],
+    "uncertainty_km": 2.55,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.65,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 10.9,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "detection_id": "det_an_002",
+    "scenario_id": "andaman",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              93.06,
+              12.275
+            ],
+            [
+              93.116,
+              12.275
+            ],
+            [
+              93.116,
+              12.319
+            ],
+            [
+              93.06,
+              12.319
+            ],
+            [
+              93.06,
+              12.275
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_an_002",
+        "scenario_id": "andaman"
+      }
+    },
+    "estimated_origin_time": "2025-02-19T10:48:00Z",
+    "origin_window_start": "2025-02-19T10:33:00Z",
+    "origin_window_end": "2025-02-19T11:03:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-02-19T10:48:00Z",
+        "position": {
+          "lat": 12.297,
+          "lon": 93.088
+        }
+      },
+      {
+        "timestamp": "2025-02-19T16:48:00Z",
+        "position": {
+          "lat": 12.31289,
+          "lon": 93.10944
+        }
+      },
+      {
+        "timestamp": "2025-02-19T22:48:00Z",
+        "position": {
+          "lat": 12.32878,
+          "lon": 93.13089
+        }
+      },
+      {
+        "timestamp": "2025-02-20T04:48:00Z",
+        "position": {
+          "lat": 12.34467,
+          "lon": 93.15233
+        }
+      }
+    ],
+    "uncertainty_km": 2.39,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.63,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 10.6,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  }
+]

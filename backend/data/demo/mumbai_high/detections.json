@@ -1,0 +1,116 @@
+[
+  {
+    "id": "det_mh_001",
+    "scene_id": "scene_mh_001",
+    "scenario_id": "mumbai_high",
+    "sector": "Mumbai High \u2014 Heera field",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.405,
+              19.372
+            ],
+            [
+              71.452,
+              19.365
+            ],
+            [
+              71.478,
+              19.398
+            ],
+            [
+              71.462,
+              19.432
+            ],
+            [
+              71.418,
+              19.426
+            ],
+            [
+              71.395,
+              19.401
+            ],
+            [
+              71.405,
+              19.372
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_mh_001",
+        "scenario_id": "mumbai_high",
+        "sector": "Mumbai High \u2014 Heera field"
+      }
+    },
+    "confidence": 0.936,
+    "area_sqkm": 4.8,
+    "perimeter_km": 12.6,
+    "elongation": 2.7,
+    "fragment_count": 1,
+    "age_class": "fresh",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "det_mh_002",
+    "scene_id": "scene_mh_002",
+    "scenario_id": "mumbai_high",
+    "sector": "Mumbai High \u2014 Neelam approach",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.585,
+              19.508
+            ],
+            [
+              71.632,
+              19.501
+            ],
+            [
+              71.658,
+              19.532
+            ],
+            [
+              71.641,
+              19.566
+            ],
+            [
+              71.598,
+              19.559
+            ],
+            [
+              71.574,
+              19.532
+            ],
+            [
+              71.585,
+              19.508
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_mh_002",
+        "scenario_id": "mumbai_high",
+        "sector": "Mumbai High \u2014 Neelam approach"
+      }
+    },
+    "confidence": 0.882,
+    "area_sqkm": 3.1,
+    "perimeter_km": 9.4,
+    "elongation": 2.2,
+    "fragment_count": 1,
+    "age_class": "aging",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

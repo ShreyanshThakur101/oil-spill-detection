@@ -1,5 +1,5 @@
 """
-Shared geographic and geometric utilities (Person 1 owned).
+Shared geographic and geometric utilities.
 """
 import math
 from typing import Any, Dict, List, Tuple

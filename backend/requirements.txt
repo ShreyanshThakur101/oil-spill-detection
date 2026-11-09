@@ -7,7 +7,7 @@ pyproj
 requests
 pytest
 
-# --- Person 2 additions ---
+# Radar computer vision and geospatial inference
 torch>=2.1
 torchvision
 segmentation-models-pytorch
@@ -16,7 +16,5 @@ opencv-python
 Pillow
 numpy
 
-# --- Person 3 additions ---
-opendrift==1.14.11
-# --- Person 3 additions ---
+# Hydrodynamic drift modeling
 opendrift==1.14.11

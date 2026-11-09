@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scene_gc_001",
+    "scenario_id": "gujarat_corridor",
+    "region_id": "IN-GJ",
+    "bbox": [
+      72.05,
+      21.18,
+      72.5,
+      21.55
+    ],
+    "timestamp": "2025-04-22T05:48:00Z",
+    "polarization": "VV",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "scene_gc_002",
+    "scenario_id": "gujarat_corridor",
+    "region_id": "IN-GJ",
+    "bbox": [
+      72.32,
+      21.38,
+      72.75,
+      21.75
+    ],
+    "timestamp": "2025-04-24T05:54:00Z",
+    "polarization": "VV+VH",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

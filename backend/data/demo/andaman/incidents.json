@@ -1,0 +1,34 @@
+[
+  {
+    "incident_id": "inc_an_001",
+    "scenario_id": "andaman",
+    "scene_id": "scene_an_001",
+    "detection_id": "det_an_001",
+    "vessel_id": "vsl_an_001",
+    "title": "Crude sheen near Port Blair",
+    "description": "A 3.4 km\u00b2 crude sheen was detected on the Port Blair approach. The top-ranked tanker shows a 52-minute AIS gap inside the Six Degree Channel transit.",
+    "severity": "CRITICAL",
+    "status": "OPEN",
+    "reported_at": "2025-02-18T06:20:00Z",
+    "mrcc": "MRCC Port Blair",
+    "response_asset": "ICG Cutter Kamorta",
+    "estimated_area_sqkm": 3.4,
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "incident_id": "inc_an_002",
+    "scenario_id": "andaman",
+    "scene_id": "scene_an_002",
+    "detection_id": "det_an_002",
+    "vessel_id": "vsl_an_002",
+    "title": "Sheen in Six Degree Channel",
+    "description": "A 2.7 km\u00b2 sheen was detected in the Six Degree Channel international tanker route.",
+    "severity": "HIGH",
+    "status": "UNDER_REVIEW",
+    "reported_at": "2025-02-20T06:35:00Z",
+    "mrcc": "MRCC Port Blair",
+    "response_asset": "ICG Cutter Baratang",
+    "estimated_area_sqkm": 2.7,
+    "provenance": "SIMULATED_DEMO"
+  }
+]

@@ -1,5 +1,5 @@
 """
-Unit tests for the detection module (Person 2): ml/dataset.py, ml/model_utils.py,
+Unit tests for the detection module: ml/dataset.py, ml/model_utils.py,
 ml/shape_features.py, ml/infer.py.
 """
 import numpy as np

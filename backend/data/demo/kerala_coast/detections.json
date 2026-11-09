@@ -1,0 +1,116 @@
+[
+  {
+    "id": "det_kc_001",
+    "scene_id": "scene_kc_001",
+    "scenario_id": "kerala_coast",
+    "sector": "Kerala Coast \u2014 Kochi approaches",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.322,
+              9.548
+            ],
+            [
+              75.375,
+              9.541
+            ],
+            [
+              75.403,
+              9.574
+            ],
+            [
+              75.386,
+              9.609
+            ],
+            [
+              75.339,
+              9.602
+            ],
+            [
+              75.313,
+              9.574
+            ],
+            [
+              75.322,
+              9.548
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_kc_001",
+        "scenario_id": "kerala_coast",
+        "sector": "Kerala Coast \u2014 Kochi approaches"
+      }
+    },
+    "confidence": 0.902,
+    "area_sqkm": 3.9,
+    "perimeter_km": 11.2,
+    "elongation": 2.5,
+    "fragment_count": 1,
+    "age_class": "fresh",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "det_kc_002",
+    "scene_id": "scene_kc_002",
+    "scenario_id": "kerala_coast",
+    "sector": "Kerala Coast \u2014 Kollam offshore",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.588,
+              9.268
+            ],
+            [
+              75.641,
+              9.261
+            ],
+            [
+              75.669,
+              9.294
+            ],
+            [
+              75.652,
+              9.329
+            ],
+            [
+              75.605,
+              9.322
+            ],
+            [
+              75.579,
+              9.294
+            ],
+            [
+              75.588,
+              9.268
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_kc_002",
+        "scenario_id": "kerala_coast",
+        "sector": "Kerala Coast \u2014 Kollam offshore"
+      }
+    },
+    "confidence": 0.847,
+    "area_sqkm": 2.2,
+    "perimeter_km": 7.1,
+    "elongation": 1.8,
+    "fragment_count": 1,
+    "age_class": "aging",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

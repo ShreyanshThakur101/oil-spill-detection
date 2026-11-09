@@ -1,5 +1,5 @@
 """
-Unit tests for drift modeling (Person 3): physics/drift_model.py, physics/environmental_data.py.
+Unit tests for drift modeling: physics/drift_model.py, physics/environmental_data.py.
 """
 from datetime import datetime
 import pytest

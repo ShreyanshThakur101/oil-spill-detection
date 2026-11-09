@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scene_mh_001",
+    "scenario_id": "mumbai_high",
+    "region_id": "IN-MH",
+    "bbox": [
+      71.25,
+      19.2,
+      71.65,
+      19.6
+    ],
+    "timestamp": "2025-05-14T06:12:00Z",
+    "polarization": "VV",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "scene_mh_002",
+    "scenario_id": "mumbai_high",
+    "region_id": "IN-MH",
+    "bbox": [
+      71.4,
+      19.35,
+      71.85,
+      19.75
+    ],
+    "timestamp": "2025-05-16T06:18:00Z",
+    "polarization": "VV+VH",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

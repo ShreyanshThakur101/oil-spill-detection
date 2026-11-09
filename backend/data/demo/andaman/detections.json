@@ -1,0 +1,116 @@
+[
+  {
+    "id": "det_an_001",
+    "scene_id": "scene_an_001",
+    "scenario_id": "andaman",
+    "sector": "Andaman \u2014 Port Blair approaches",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92.812,
+              11.918
+            ],
+            [
+              92.865,
+              11.911
+            ],
+            [
+              92.893,
+              11.944
+            ],
+            [
+              92.876,
+              11.979
+            ],
+            [
+              92.829,
+              11.972
+            ],
+            [
+              92.803,
+              11.944
+            ],
+            [
+              92.812,
+              11.918
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_an_001",
+        "scenario_id": "andaman",
+        "sector": "Andaman \u2014 Port Blair approaches"
+      }
+    },
+    "confidence": 0.887,
+    "area_sqkm": 3.4,
+    "perimeter_km": 10.3,
+    "elongation": 2.3,
+    "fragment_count": 1,
+    "age_class": "fresh",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "det_an_002",
+    "scene_id": "scene_an_002",
+    "scenario_id": "andaman",
+    "sector": "Andaman \u2014 Six Degree Channel",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              93.118,
+              12.318
+            ],
+            [
+              93.171,
+              12.311
+            ],
+            [
+              93.199,
+              12.344
+            ],
+            [
+              93.182,
+              12.379
+            ],
+            [
+              93.135,
+              12.372
+            ],
+            [
+              93.109,
+              12.344
+            ],
+            [
+              93.118,
+              12.318
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_an_002",
+        "scenario_id": "andaman",
+        "sector": "Andaman \u2014 Six Degree Channel"
+      }
+    },
+    "confidence": 0.833,
+    "area_sqkm": 2.7,
+    "perimeter_km": 8.4,
+    "elongation": 2.0,
+    "fragment_count": 1,
+    "age_class": "aging",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

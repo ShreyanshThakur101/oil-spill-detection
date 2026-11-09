@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scene_an_001",
+    "scenario_id": "andaman",
+    "region_id": "IN-AN",
+    "bbox": [
+      92.7,
+      11.8,
+      93.1,
+      12.15
+    ],
+    "timestamp": "2025-02-18T04:42:00Z",
+    "polarization": "VV",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "scene_an_002",
+    "scenario_id": "andaman",
+    "region_id": "IN-AN",
+    "bbox": [
+      93.0,
+      12.2,
+      93.4,
+      12.55
+    ],
+    "timestamp": "2025-02-20T04:48:00Z",
+    "polarization": "VV+VH",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "detection_id": "det_kc_001",
+    "scenario_id": "kerala_coast",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.264,
+              9.505
+            ],
+            [
+              75.32,
+              9.505
+            ],
+            [
+              75.32,
+              9.549
+            ],
+            [
+              75.264,
+              9.549
+            ],
+            [
+              75.264,
+              9.505
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_kc_001",
+        "scenario_id": "kerala_coast"
+      }
+    },
+    "estimated_origin_time": "2025-05-24T12:05:00Z",
+    "origin_window_start": "2025-05-24T11:50:00Z",
+    "origin_window_end": "2025-05-24T12:20:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-05-24T12:05:00Z",
+        "position": {
+          "lat": 9.527,
+          "lon": 75.292
+        }
+      },
+      {
+        "timestamp": "2025-05-24T18:05:00Z",
+        "position": {
+          "lat": 9.54289,
+          "lon": 75.31344
+        }
+      },
+      {
+        "timestamp": "2025-05-25T00:05:00Z",
+        "position": {
+          "lat": 9.55878,
+          "lon": 75.33489
+        }
+      },
+      {
+        "timestamp": "2025-05-25T06:05:00Z",
+        "position": {
+          "lat": 9.57467,
+          "lon": 75.35633
+        }
+      }
+    ],
+    "uncertainty_km": 2.66,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.67,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 11.1,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "detection_id": "det_kc_002",
+    "scenario_id": "kerala_coast",
+    "origin_polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.53,
+              9.225
+            ],
+            [
+              75.586,
+              9.225
+            ],
+            [
+              75.586,
+              9.269
+            ],
+            [
+              75.53,
+              9.269
+            ],
+            [
+              75.53,
+              9.225
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_kc_002",
+        "scenario_id": "kerala_coast"
+      }
+    },
+    "estimated_origin_time": "2025-05-26T12:11:00Z",
+    "origin_window_start": "2025-05-26T11:56:00Z",
+    "origin_window_end": "2025-05-26T12:26:00Z",
+    "trajectories": [
+      {
+        "timestamp": "2025-05-26T12:11:00Z",
+        "position": {
+          "lat": 9.247,
+          "lon": 75.558
+        }
+      },
+      {
+        "timestamp": "2025-05-26T18:11:00Z",
+        "position": {
+          "lat": 9.26289,
+          "lon": 75.57944
+        }
+      },
+      {
+        "timestamp": "2025-05-27T00:11:00Z",
+        "position": {
+          "lat": 9.27878,
+          "lon": 75.60089
+        }
+      },
+      {
+        "timestamp": "2025-05-27T06:11:00Z",
+        "position": {
+          "lat": 9.29467,
+          "lon": 75.62233
+        }
+      }
+    ],
+    "uncertainty_km": 2.28,
+    "particle_count": 200,
+    "hydrodynamics": {
+      "current_speed_knots": 0.62,
+      "current_direction_deg": 288,
+      "wind_speed_knots": 10.4,
+      "wind_direction_deg": 242
+    },
+    "provenance": "SIMULATED_DEMO"
+  }
+]

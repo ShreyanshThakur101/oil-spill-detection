@@ -7,6 +7,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Body
 from sqlalchemy.orm import Session
 
 from ..database import get_db
+from ..demo_data import is_simulated_case
 from ..models import Case
 from ..pipeline.orchestrator import run_full_pipeline, _get_case_metadata
 from ..nugen.client import invoke_nugen_inference
@@ -22,7 +23,7 @@ def run_pipeline(case_id: int, db: Session = Depends(get_db)):
     Trigger end-to-end SAGAR-DRISHTI pipeline execution for a selected demo case.
     """
     case = db.query(Case).filter(Case.id == case_id).first()
-    if not case:
+    if not case or is_simulated_case(case):
         raise HTTPException(status_code=404, detail="Case not found")
     try:
         result = run_full_pipeline(case_id, db)
@@ -41,7 +42,7 @@ def get_case_dossier(
     Generate or export the court-ready ICG maritime enforcement dossier for a specific suspect vessel.
     """
     case = db.query(Case).filter(Case.id == case_id).first()
-    if not case:
+    if not case or is_simulated_case(case):
         raise HTTPException(status_code=404, detail="Case not found")
     try:
         pipeline_res = run_full_pipeline(case_id, db)

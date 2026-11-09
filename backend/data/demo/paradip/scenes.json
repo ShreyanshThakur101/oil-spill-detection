@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scene_pr_001",
+    "scenario_id": "paradip",
+    "region_id": "IN-OD",
+    "bbox": [
+      86.62,
+      20.08,
+      87.05,
+      20.45
+    ],
+    "timestamp": "2025-03-11T05:32:00Z",
+    "polarization": "VV",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "scene_pr_002",
+    "scenario_id": "paradip",
+    "region_id": "IN-OD",
+    "bbox": [
+      86.88,
+      20.28,
+      87.3,
+      20.65
+    ],
+    "timestamp": "2025-03-13T05:38:00Z",
+    "polarization": "VV+VH",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

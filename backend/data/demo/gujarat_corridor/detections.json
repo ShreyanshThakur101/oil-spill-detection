@@ -1,0 +1,116 @@
+[
+  {
+    "id": "det_gc_001",
+    "scene_id": "scene_gc_001",
+    "scenario_id": "gujarat_corridor",
+    "sector": "Gujarat Corridor \u2014 Hazira anchorage",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.185,
+              21.318
+            ],
+            [
+              72.238,
+              21.311
+            ],
+            [
+              72.266,
+              21.344
+            ],
+            [
+              72.249,
+              21.379
+            ],
+            [
+              72.202,
+              21.372
+            ],
+            [
+              72.176,
+              21.344
+            ],
+            [
+              72.185,
+              21.318
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_gc_001",
+        "scenario_id": "gujarat_corridor",
+        "sector": "Gujarat Corridor \u2014 Hazira anchorage"
+      }
+    },
+    "confidence": 0.914,
+    "area_sqkm": 5.6,
+    "perimeter_km": 14.1,
+    "elongation": 3.0,
+    "fragment_count": 2,
+    "age_class": "fresh",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "det_gc_002",
+    "scene_id": "scene_gc_002",
+    "scenario_id": "gujarat_corridor",
+    "sector": "Gujarat Corridor \u2014 Vadinar SPM approach",
+    "polygon": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.452,
+              21.524
+            ],
+            [
+              72.505,
+              21.517
+            ],
+            [
+              72.533,
+              21.55
+            ],
+            [
+              72.516,
+              21.585
+            ],
+            [
+              72.469,
+              21.578
+            ],
+            [
+              72.443,
+              21.55
+            ],
+            [
+              72.452,
+              21.524
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "provenance": "SIMULATED_DEMO",
+        "detection_id": "det_gc_002",
+        "scenario_id": "gujarat_corridor",
+        "sector": "Gujarat Corridor \u2014 Vadinar SPM approach"
+      }
+    },
+    "confidence": 0.871,
+    "area_sqkm": 2.9,
+    "perimeter_km": 8.7,
+    "elongation": 2.1,
+    "fragment_count": 1,
+    "age_class": "aging",
+    "provenance": "SIMULATED_DEMO"
+  }
+]

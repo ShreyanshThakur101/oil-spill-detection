@@ -4,7 +4,7 @@
 > *PCCOE International Grand Challenge 2026 • Theme 5: Ocean & Marine*  
 > *Aligned with UN SDG 13 (Climate Action) & SDG 14 (Life Below Water)*  
 > *Target End-Users: Indian Coast Guard (ICG) MRCC • DG Shipping • State Pollution Control Boards*  
-> *view live site at"[sagar-drishti.vercel](https://sagar-drishti-indol.vercel.app/)"*
+> *Live deployment: [sagar-drishti-indol.vercel.app](https://sagar-drishti-indol.vercel.app/)*
 
 ---
 
@@ -56,21 +56,37 @@
 
 ---
 
-## 🚢 Benchmark Historical Incidents
+## 🧭 National Intelligence & Case Studies
 
-- **Case 1: Kochi Port Approaches (MSC Elsa III Sinking - May 2025)**:
-  - 450 metric tonnes bunker fuel dumped off Kerala coast; 14.8 km² slick.
-  - Primary Suspect: `MMSI 354892000` (MSC ELSA III / CARGO ALPHA, Flag: Liberia).
-  - 42-min deliberate transponder blackout + 6.8 kt speed deceleration.
-  - 94.2% attribution confidence; Section 356J statutory detention order issued for Port of Cochin.
-- **Case 2: Mumbai Port Approaches (JNPT / Mumbai High Tanker Corridor)**:
-  - Crude carrier discharge along high-density western tanker route off Maharashtra coast.
-  - Southward monsoon current drift towards Konkan coastline.
-  - Primary Suspect: `MMSI 538009871` (MT ARABIAN GLORY, 70-min AIS blackout, 7.4 kt deceleration).
+The **National Intelligence** view provides a unified coastal picture across 13 coastal states and Union Territories, with approximately 7,500 km of coastline represented as provisional satellite-search envelopes. It supports coast and zone filters, national map layers, and five selectable case studies:
+
+- Mumbai High
+- Gujarat Offshore Corridor
+- Paradip
+- Kerala Coast
+- Andaman & Nicobar
+
+Each case study presents an incident location and observation window, satellite sensor and polarization, slick detections, vessel-attribution results, backward drift reconstruction, and investigation status. The five national case studies are **illustrative synthetic scenarios** built to exercise the complete workflow; provenance remains recorded in the source fixtures and in the API response. They are not presented as verified historical incidents, real satellite acquisitions, confirmed vessel identities, or completed enforcement actions.
 
 ---
 
-## 🚀 Quick Start / Running the Prototype
+## 🚢 Reference Case Studies
+
+The analysis pipeline ships with two reference benchmark records used for evaluation. Figures below are scenario outputs, not operational findings or independently verified incident reports.
+
+- **Case 1: Kochi Port Approaches (MSC Elsa III benchmark)**:
+  - 450 metric tonnes bunker fuel scenario off the Kerala coast; 14.8 km² slick.
+  - Primary candidate: `MMSI 354892000` (MSC ELSA III / CARGO ALPHA, Flag: Liberia).
+  - 42-min transponder blackout + 6.8 kt speed deceleration.
+  - 94.2% attribution confidence; Section 356J detention scenario for the Port of Cochin.
+- **Case 2: Mumbai Port Approaches (JNPT / Mumbai High Tanker Corridor)**:
+  - Crude carrier discharge scenario along the western tanker route off the Maharashtra coast.
+  - Southward monsoon current drift towards the Konkan coastline.
+  - Primary candidate: `MMSI 538009871` (MT ARABIAN GLORY, 70-min AIS blackout, 7.4 kt deceleration).
+
+---
+
+## 🚀 Quick Start
 
 ### 1. Prerequisites
 - **Python 3.11+**
@@ -98,10 +114,11 @@ npm run dev
 
 ## 🧪 Automated Verification & Testing
 
-Run all 21 core unit and integration tests:
+Run the core API, geospatial, drift, scoring, and national case-study tests:
 ```bash
-uv run --with pytest --with fastapi --with sqlalchemy --with pydantic --with shapely --with httpx pytest backend/tests/test_geo_utils.py backend/tests/test_api.py backend/tests/test_drift.py backend/tests/test_scoring.py
+python -m pytest backend/tests -q --ignore=backend/tests/test_detection.py
 ```
+The ML detection suite additionally requires PyTorch, TorchVision, Rasterio, and OpenCV. The command above covers the non-ML suite (32 tests in the reference environment).
 
 Build production frontend assets:
 ```bash
@@ -110,7 +127,7 @@ cd frontend && npm run build
 
 ---
 
-## 📊 Operational Running Cost Economics (Slide 9)
+## 📊 Operational Economics
 
 - **₹4 – 9 per incident compute**: Serverless CNN inference & 200-particle OpenDrift simulation.
 - **< 90 min end-to-end turnaround**: From satellite overpass to court-ready attribution brief (vs 5–7 days manual review).

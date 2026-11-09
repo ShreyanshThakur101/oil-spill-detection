@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scene_kc_001",
+    "scenario_id": "kerala_coast",
+    "region_id": "IN-KL",
+    "bbox": [
+      75.18,
+      9.4,
+      75.6,
+      9.78
+    ],
+    "timestamp": "2025-05-25T06:05:00Z",
+    "polarization": "VV",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  },
+  {
+    "id": "scene_kc_002",
+    "scenario_id": "kerala_coast",
+    "region_id": "IN-KL",
+    "bbox": [
+      75.45,
+      9.14,
+      75.9,
+      9.52
+    ],
+    "timestamp": "2025-05-27T06:11:00Z",
+    "polarization": "VV+VH",
+    "sensor": "Sentinel-1A IW GRD",
+    "provenance": "SIMULATED_DEMO"
+  }
+]
